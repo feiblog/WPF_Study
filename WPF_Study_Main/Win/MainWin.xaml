@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPF_Study_Main.Win.MainWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Study_Main.Win" 
+        xmlns:Navigation="clr-namespace:WPF_Study_Main.Control.Navigation"
+        mc:Ignorable="d"
+        Title="MainWin" Height="800" Width="1200"
+        AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" BorderThickness="1" BorderBrush="#CCC">
+    <Grid Background="#EEEEF2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Navigation:HeaderControl x:Name="Header" Background="Transparent" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" MouseDown="Header_MouseDown"/>
+        <Navigation:AsideControl x:Name="Aside" Navigation:AsideControl.GotoPage="GotoPages"  Grid.Row="1" Grid.Column="0" Margin="20 10"/>
+        <Navigation:FooterControl x:Name="Footer" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="#007ACC"/>
+
+        <Border Grid.Row="1" Grid.Column="1">
+            <GroupBox>
+                <Frame Name="bodyFrame" NavigationUIVisibility="Hidden" Margin="0 10 10 10"/>
+            </GroupBox>
+        </Border>
+    </Grid>
+</Window>

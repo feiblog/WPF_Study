@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF_Study_Main
+namespace WPF_Study_Main.Control.TestPages
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// Page2.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page2 : Page
     {
-        public MainWindow()
+        public Page2()
         {
             InitializeComponent();
         }
