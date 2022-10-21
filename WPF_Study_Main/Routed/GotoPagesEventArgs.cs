@@ -44,9 +44,9 @@ namespace WPF_Study_Main.Routed
         }
 
         /// <summary>
-        /// 按钮点击时间
+        /// 触发时间
         /// </summary>
-        public DateTime ClickTime { get; set; }
+        public DateTime TriggeringTime { get; set; }
 
         /// <summary>
         /// 页面路径

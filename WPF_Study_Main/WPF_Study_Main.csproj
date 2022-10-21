@@ -103,7 +103,6 @@
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Routed\GotoPagesEventArgs.cs" />
-    <Compile Include="Routed\ReportCurrentLocationEventArgs.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="Win\InitializeWin.xaml.cs">
       <DependentUpon>InitializeWin.xaml</DependentUpon>
