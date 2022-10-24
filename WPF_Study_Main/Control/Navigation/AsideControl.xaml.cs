@@ -36,28 +36,15 @@ namespace WPF_Study_Main.Control.Navigation
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void page1Button(object sender, RoutedEventArgs e)
+        private void BtnGotoPage(object sender,RoutedEventArgs e)
         {
+            RadioButton obj = (RadioButton)sender;
             GotoPagesEventArgs args = new GotoPagesEventArgs(GotoPageEvent, this);
             args.TriggeringTime = DateTime.Now;
-            args.PageUrl = "1";
+            args.PageUrl = obj.Tag.ToString();
             this.RaiseEvent(args);
         }
 
-        /// <summary>
-        /// 创建可以激发路由事件的方法
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void page2Button(object sender, RoutedEventArgs e)
-        {
-            GotoPagesEventArgs args = new GotoPagesEventArgs(GotoPageEvent, this);
-            args.TriggeringTime = DateTime.Now;
-            args.PageUrl = "2";
-            this.RaiseEvent(args);
-        }
         #endregion
-
-
     }
 }

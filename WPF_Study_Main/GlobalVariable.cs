@@ -42,8 +42,9 @@ namespace WPF_Study_Main
         /// </summary>
         public static Dictionary<string, Uri> AllViews = new Dictionary<string, Uri>()
         {
-            { "page1", new Uri("pages/TestPages/Page1.xaml", UriKind.Relative)},
-            { "page2", new Uri("pages/TestPages/Page2.xaml", UriKind.Relative)}
+            { "Home", new Uri("Pages/HomePage.xaml", UriKind.Relative)},
+            { "SystemSetting", new Uri("Pages/SystemSettingPage.xaml", UriKind.Relative)},
+            { "PictureProcessing", new Uri("Pages/ImagePage.xaml", UriKind.Relative)}
         };
     }
 }

@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Study_Main.Win" 
         xmlns:Navigation="clr-namespace:WPF_Study_Main.Control.Navigation"
+                xmlns:hc="clr-namespace:HandyControl.Controls;assembly=HandyControl"
         mc:Ignorable="d"
-        Title="MainWin" Height="800" Width="1200"
+        Title="MainWin" 
+        Height="{Binding Converter={StaticResource DPIConverter},ConverterParameter=600}"
+        Width="{Binding Converter={StaticResource DPIConverter},ConverterParameter=800}"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" BorderThickness="1" BorderBrush="#CCC">
     <Grid Background="#EEEEF2">
         <Grid.RowDefinitions>

@@ -2,14 +2,21 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WPF_Study_Main.Control.Navigation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="300">
-    <Border Background="#FFFFFF" CornerRadius="15 15 15 15">
-        <StackPanel>
-            <Button Margin="20" Height="40" Click="page1Button">页面一</Button>
-            <Button Margin="20" Height="40" Click="page2Button">页面二</Button>
-        </StackPanel>
-    </Border>
+    <StackPanel>
+        <Expander Header="微软雅黑" Style="{Binding ExperimentExpanderStyle}">
+            <StackPanel>
+                <RadioButton Click="BtnGotoPage" Content="系统设置" Tag="SystemSetting" Style="{StaticResource McRadioButton}"></RadioButton>
+                <RadioButton Click="BtnGotoPage" Content="图像处理" Tag="PictureProcessing" Style="{StaticResource McRadioButton}"></RadioButton>
+            </StackPanel>
+        </Expander>
+        <Expander Header=" TEST" Style="{Binding ExperimentExpanderStyle}">
+            <StackPanel>
+                <RadioButton Content="123"  Style="{StaticResource McRadioButton}"></RadioButton>
+                <RadioButton Content="123"  Style="{StaticResource McRadioButton}"></RadioButton>
+            </StackPanel>
+        </Expander>
+    </StackPanel>
 </UserControl>
